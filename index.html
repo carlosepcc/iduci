@@ -10,8 +10,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
     />
-    <!-- development version, includes helpful console warnings -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- development version, includes helpful console warnings
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
     
     <script>
       if ('serviceWorker' in navigator){
@@ -24,8 +24,8 @@
     
   </head>
   <body>
-        <span class="app-title">branduci-app</span>
-    <div class="app" id="app-branduci" contenteditable="false">
+        
+    <div id="app-branduci" contenteditable="false">
       
       <div id=brand-bars-wrapper>
         <!-- XAVIA -->
@@ -390,25 +390,6 @@
       padding: 16px;
       margin: 4px;
       border-radius: 4px;
-    }
-    .app {
-      resize: both;
-      overflow: auto;
-      box-shadow: 1px 1px 6px 0 #0003 inset;
-      padding: 32px;
-      margin: 4px;
-      margin-bottom: 2rem;
-      border-radius: 8px;
-      background: white;
-      border: 4px solid #0b7;
-      border-top: 3px solid rgb(14, 68, 64);
-    }
-    .app-title {
-      color: #fffe;
-      margin-left: 1em;
-      background: #0006;
-      padding: 8px 24px;
-      border-radius: 8px 8px 0 0;
     }
   </style>
 
