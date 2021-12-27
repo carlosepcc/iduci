@@ -1,0 +1,12 @@
+.DS_Store
+.thumbs.db
+node_modules
+images
+
+# Editor directories and files
+.vscode
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
