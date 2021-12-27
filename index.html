@@ -25,10 +25,11 @@
   </head>
   <body>
         
-    <div id="app-branduci" contenteditable="false">
+    <div id="app-branduci">
       
       <div id=brand-bars-wrapper>
         <!-- XAVIA -->
+        <div class="brand-wrapper">
       <nav class="brand-bar xavia-bar">
         <div id="brand-frame">
           <span class="brandi i-xavia"></span>
@@ -44,23 +45,26 @@
           </span>
         </div>
       </nav>
+      <div class="actions">
       <input
         type="button"
-        value="Copiar código HTML"
+        value="Copiar código"
         onclick='copyText(document.querySelector(".xavia-bar").outerHTML.replace(/contenteditable=""/g, ""))'
       />
       <details>
         <summary
           onclick='this.nextElementSibling.innerText=document.querySelector(".xavia-bar").outerHTML.replace(/contenteditable=""/g, "")'
         >
-        Ver código HTML
+        Ver código
         </summary>
         <pre  class="codearea"></pre>
       </details>
+      </div>
 
-      <br>
+    </div>
 
       <!-- XABAL -->
+      <div class="brand-wrapper">
       <nav class="brand-bar xabal-bar">
         <div id="brand-frame">
           <span class="brandi i-xabal"></span>
@@ -76,22 +80,25 @@
           </span>
         </div>
       </nav>
+      <div class="actions">
       <input
         type="button"
-        value="Copiar código HTML"
+        value="Copiar código"
         onclick='copyText(document.querySelector(".xabal-bar").outerHTML.replace(/contenteditable=""/g, ""))'
       />
       <details>
         <summary
           onclick='this.nextElementSibling.innerText=document.querySelector(".xabal-bar").outerHTML.replace(/contenteditable=""/g, "")'
         >
-        Ver código HTML
+        Ver código
         </summary>
         <pre  class="codearea"></pre>
       </details>
-      <br>
+      </div>
+    </div>
 
       <!-- XAUCE -->
+      <div class="brand-wrapper">
       <nav class="brand-bar xauce-bar">
         <div id="brand-frame">
           <span class="brandi i-xauce"></span>
@@ -106,22 +113,25 @@
           </span>
         </div>
       </nav>
+      <div class="actions">
       <input
         type="button"
-        value="Copiar código HTML"
+        value="Copiar código"
         onclick='copyText(document.querySelector(".xauce-bar").outerHTML.replace(/contenteditable=""/g, ""))'
       />
       <details>
         <summary
           onclick='this.nextElementSibling.innerText=document.querySelector(".xauce-bar").outerHTML.replace(/contenteditable=""/g, "")'
         >
-          Ver código HTML
+          Ver código
         </summary>
         <pre  class="codearea"></pre>
       </details>
-      <br>
+      </div>
+    </div>
 
       <!-- XEDRO -->
+      <div class="brand-wrapper">
       <nav class="brand-bar xedro-bar">
         <div id="brand-frame">
           <span class="brandi i-xedro"></span>
@@ -137,22 +147,25 @@
           </span>
         </div>
       </nav>
+      <div class="actions">
       <input
         type="button"
-        value="Copiar código HTML"
+        value="Copiar código"
         onclick='copyText(document.querySelector(".xedro-bar").outerHTML.replace(/contenteditable=""/g, ""))'
       />
       <details>
         <summary
           onclick='this.nextElementSibling.innerText=document.querySelector(".xedro-bar").outerHTML.replace(/contenteditable=""/g, "")'
         >
-        Ver código HTML
+        Ver código
         </summary>
         <pre  class="codearea"></pre>
       </details>
-      <br>
+      </div>
+    </div>
 
       <!-- XILEMA -->
+      <div class="brand-wrapper">
       <nav class="brand-bar xilema-bar">
         <div id="brand-frame">
           <span class="brandi i-xilema"></span>
@@ -168,19 +181,21 @@
           </span>
         </div>
       </nav>
+      <div class="actions">
       <input
         type="button"
-        value="Copiar código HTML"
+        value="Copiar código"
         onclick='copyText(document.querySelector(".xilema-bar").outerHTML.replace(/contenteditable=""/g, ""))'
       />
       <details>
         <summary
           onclick='this.nextElementSibling.innerText=document.querySelector(".xilema-bar").outerHTML.replace(/contenteditable=""/g, "")'
         >
-        Ver código HTML
+        Ver código
         </summary>
         <pre  class="codearea"></pre>
       </details>
+    </div>
       <br>
     
     </div>
@@ -206,6 +221,7 @@
         </summary>
         <pre class="codearea"></pre>
       </details>
+    </div>
     </div>
 
   <!--BRANDUCISTYLE-->
@@ -240,6 +256,14 @@
     body {
       margin: 0;
       font-family: sans-serif;
+    }
+    
+    .actions{
+      padding-inline: 16px;
+    }
+    .brand-wrapper{
+      margin-bottom: 3rem;
+      padding-inline-end: 16px;
     }
     .brand-bar {
       margin-bottom: 8px;
@@ -394,22 +418,41 @@
   </style>
 
 <style>
-  button,input[type=button]{
-    
+summary,button,input[type=button]{
     transition: .2s;
-    padding: 8px 16px;width: 100%;text-transform: uppercase;margin-bottom: 6px;
+    }
+  button,input[type=button]{
+    cursor: pointer;
+    font-weight: 700;
+    padding: 8px 16px;
+    width: 100%;text-transform: uppercase;margin-bottom: 6px;
     border: none;
-    box-shadow: 0 2px 0 0 #0003;
-    border-radius: 4px;
+    box-shadow:0 2px 0 #0001;
     }
     button:hover,input[type=button]:hover{
-    background: #ddd;
+      box-shadow: 0 3px #0009;
     }
     button:active,input[type=button]:active{
-    background: #eee;
     transform: translateY(1px);
-    box-shadow: 0 1px 0 0 #0003;
+    box-shadow: 0 1px #0009;
     }
+    button,input[type=button]:hover,details[open],details[open]>summary,summary:hover{ 
+      background: #444;
+      color:#fff;
+    }
+    /*BORDERRADIUS*/
+    details,button,input[type=button],summary{
+
+    border-radius: 4px;
+    }
+    summary{
+      cursor: pointer;
+      padding: 8px 16px;
+      text-align: end;
+      margin-bottom: -10px;
+    }
+    
+   
 </style>
   <script>
     function copyText(text){
