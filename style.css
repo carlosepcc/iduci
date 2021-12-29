@@ -1,10 +1,4 @@
-.xavia-bar {
-  box-shadow: 0 2px 0 0 var(--xavia);
-  background: linear-gradient(140deg, var(--xavia) 30%, #fff 80%);
-}
-.xavia-bar .brand {
-  color: var(--xavia);
-}
+
 :root {
   --p: dodgerblue;
   --spritesuci: 'https://www.uci.cu/sites/all/themes/uci/images/sprite.png';
@@ -19,27 +13,35 @@
   --downcolor: #11134b;
   --standscolor: #726584;
 }
+html{scroll-snap-type: block proximity;}
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}
-body {
-  margin: 0;
-  font-family: sans-serif;
 }
 
 .actions {
   padding-inline: 16px;
 }
+#brand-bars-wrapper{
+  margin-bottom: 20%;
+}
 .brand-wrapper {
   margin-bottom: 3rem;
-  padding-inline-end: 16px;
+  scroll-snap-align: start;
 }
 .brand-bar {
-  margin-bottom: 8px;
+  margin-bottom: none;
   width: 100%;
 }
 
+/*BRANDS*/
+.xavia-bar {
+  box-shadow: 0 2px 0 0 var(--xavia);
+  background: linear-gradient(140deg, var(--xavia) 30%, #fff 80%);
+}
+.xavia-bar .brand {
+  color: var(--xavia);
+}
 .xabal-bar {
   -webkit-box-shadow: 0 2px 0 0 var(--xabal);
   box-shadow: 0 2px 0 0 var(--xabal);
@@ -101,8 +103,8 @@ body {
   min-width: -moz-fit-content;
   min-width: fit-content;
   max-width: 24rem;
-  border-bottom-right-radius: 100px;
-  background: -o-linear-gradient(#fff 50%, #dedede);
+  border-bottom-right-radius: 100px 200%;
+    background: -o-linear-gradient(#fff 50%, #dedede);
   background: -webkit-gradient(
     linear,
     left top,
@@ -142,6 +144,7 @@ body {
 }
 
 .siglas {
+  text-transform: uppercase;
   font-weight: 1000;
   font-size: 20pt;
   background: -webkit-linear-gradient(var(--upcolor) 50%, var(--downcolor) 50%);
@@ -167,10 +170,21 @@ body {
   letter-spacing: -1px;
 }
 body {
+  position: relative;
+  margin: 0;
+  font-family: sans-serif;
   padding-bottom: 80%;
-  color: #333;
+  color: #555;
+}
+footer{
+  text-align: center;
+  width: 100%;
+  padding: 32px;
+  background: #eee;
 }
 .codearea {
+  width: 100%;
+  white-space: pre-wrap;
   border-radius: 4px;
   font-weight: 700;
   box-shadow: 2px 2px 8px 0 #0005 inset;
@@ -181,11 +195,9 @@ body {
   background: #444;
   color: #eee;
 }
-.card {
-  box-shadow: 0 0 4px 0 #0002;
-  padding: 16px;
-  margin: 4px;
-  border-radius: 4px;
+textarea.codearea{
+  height: 26em;
+  
 }
 summary,
 button,
@@ -194,28 +206,35 @@ input[type='button'] {
 }
 button,
 input[type='button'] {
+  color: #0009;
   cursor: pointer;
   font-weight: 700;
-  padding: 8px 16px;
+  padding: 16px 32px;
   width: 100%;
   text-transform: uppercase;
   margin-bottom: 6px;
   border: none;
-  box-shadow: 0 2px 0 #0002;
+  background: none;
 }
+button:hover,
+input[type='button']:hover{
 
-button:active,
-input[type='button']:active {
-  transform: translateY(1px);
-  box-shadow: 0 1px #0002;
+  background: rgba(0, 0, 0, 0.04);
+  box-shadow: 0 3px #0001;
 }
-button,
+button:hover,
 input[type='button']:hover,
-details[open],
-details[open] > summary,
 summary:hover {
   color: var(--p);
+
+
 }
+button:active,
+input[type='button']:active {
+  transform: translateY(3px);
+  box-shadow: 0 0 #0001;
+}
+
 /*BORDERRADIUS*/
 details,
 button,
@@ -223,9 +242,12 @@ input[type='button'],
 summary {
   border-radius: 4px;
 }
+details[open]{
+  scroll-snap-align: start;
+}
 summary {
   cursor: pointer;
   padding: 8px 16px;
   text-align: end;
-  margin-bottom: -10px;
+  margin-bottom: -8px;
 }

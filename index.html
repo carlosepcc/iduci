@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="icon" href="images/icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/icon.svg" type="image/svg">
     <link rel="manifest" href="/iduci.webmanifest">
       <meta name="theme-color" content="#fff" />
     
@@ -156,11 +158,11 @@
       />
       <details>
         <summary
-          onclick='this.nextElementSibling.innerText=document.querySelector(".xedro-bar").outerHTML.replace(/contenteditable=""/g, "")'
+          onclick='this.nextElementSibling.value=document.querySelector(".xedro-bar").outerHTML.replace(/contenteditable=""/g, "")'
         >
         Ver código
         </summary>
-        <pre  class="codearea"></pre>
+        <textarea  class="codearea" oninput="document.querySelector('.xedro-bar').outerHTML=value"></textarea>
       </details>
       </div>
     </div>
@@ -197,34 +199,34 @@
         <pre  class="codearea"></pre>
       </details>
     </div>
-      <br>
     
+      
     </div>
       <br>
+      <hr>
+      <!-- ! Copiar los estilos-->
       <input
         type="button"
         value="Copiar todos los estilos CSS"
-        onclick="copyText(document.querySelector('#branduci-style').innerHTML)"
+        onclick="copyText('')"
       /><br><br>
-      <details>
-        <summary
-          onclick='this.nextElementSibling.innerText=document.querySelector("#brand-bars-wrapper").innerHTML.replace(/contenteditable=""/g, "")'
-        >
-          HTML
-        </summary>
-        <pre  class="codearea"></pre>
-      </details>
-      <details>
+      
+      <!-- <details>
         <summary
           onclick="this.nextElementSibling.innerHTML=document.querySelector('#branduci-style').innerHTML"
         >
           CSS
         </summary>
         <pre class="codearea"></pre>
-      </details>
+      </details> -->
     </div>
     </div>
-  
+    <footer style="position:absolute;bottom:0;scroll-snap-align: start;">
+Ayude en GitHub <a href="https://github.com/carlosepcc/iduci">
+  github.com/carlosepcc/iduci
+</a>
+    </footer>
+  </body>
   <script type="module">
     import {Workbox} from 'https://storage.googleapis.com/workbox-cdn/releases/6.0.2/workbox-window.prod.mjs';
   
