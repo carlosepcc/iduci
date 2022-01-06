@@ -25,7 +25,15 @@ html{scroll-snap-type: block proximity;}
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
+@font-face {
+  font-family: "Electrofied";
+  /* src: url('fonts/electr.ttf'); */
+  src: url("https://db.onlinewebfonts.com/t/f45d0d0e10eb5171b1ad9ee95d1314f9.ttf") format("truetype")
+  }
+  @font-face {
+    font-family: "Aller";
+    src: url("https://db.onlinewebfonts.com/t/3bf7501ddcf8338bc9cdcedad10914cb.ttf") format("truetype")
+  }
 .actions {
   padding-inline: 16px;
 }
@@ -151,6 +159,7 @@ html{scroll-snap-type: block proximity;}
 }
 
 .siglas {
+  font-family: Electrofied,sans-serif;
   text-transform: uppercase;
   font-weight: 1000;
   font-size: 20pt;
@@ -162,7 +171,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#252159",endCo
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.stands {
+.stands,.generico {
+  font-family: Aller,sans-serif;
   display: inline-block;
   max-width: 200px;
   height: 100%;
@@ -175,7 +185,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#252159",endCo
   color: var(--xabal);
   display: block;
   margin-bottom: -3px;
-  margin-left: 4px;
+  /* margin-left: 2px; */
   font-size: 9pt;
   font-weight: 700;
   letter-spacing: -1px;
