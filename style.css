@@ -27,7 +27,6 @@ html{scroll-snap-type: block proximity;}
 }
 @font-face {
   font-family: "Electrofied";
-  /* src: url('fonts/electr.ttf'); */
   src: url("https://db.onlinewebfonts.com/t/f45d0d0e10eb5171b1ad9ee95d1314f9.ttf") format("truetype")
   }
   @font-face {
