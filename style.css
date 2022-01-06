@@ -11,6 +11,13 @@
 
   --upcolor: #323a8b;
   --downcolor: #11134b;
+
+  --logotipo1:#252159;
+  --logotipo2:#333B92;
+  --logotipo3:#150D42;
+  --logotipo4:#353E73;
+
+  --generico:#272B72; /*Empresa - industria*/
   --standscolor: #726584;
 }
 html{scroll-snap-type: block proximity;}
@@ -147,7 +154,11 @@ html{scroll-snap-type: block proximity;}
   text-transform: uppercase;
   font-weight: 1000;
   font-size: 20pt;
-  background: -webkit-linear-gradient(var(--upcolor) 50%, var(--downcolor) 50%);
+  background: rgb(37,33,89);
+background: -moz-linear-gradient(180deg, rgba(37,33,89,1) 0%, rgba(51,59,146,1) 50%, rgba(21,13,66,1) 50%, rgba(53,62,115,1) 100%);
+background: -webkit-linear-gradient(180deg, rgba(37,33,89,1) 0%, rgba(51,59,146,1) 50%, rgba(21,13,66,1) 50%, rgba(53,62,115,1) 100%);
+background: linear-gradient(180deg, rgba(37,33,89,1) 0%, rgba(51,59,146,1) 50%, rgba(21,13,66,1) 50%, rgba(53,62,115,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#252159",endColorstr="#353e73",GradientType=1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
